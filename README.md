@@ -1,4 +1,4 @@
-# drk-client
+# web-client
 
 ## Project setup
 ```
