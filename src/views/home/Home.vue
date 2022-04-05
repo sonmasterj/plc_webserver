@@ -1,24 +1,152 @@
 <template>
-  <div id="app">
-    <nav class='main-nav'>
-      <li><router-link to="/home">Trang chủ</router-link></li>
-      <li><router-link to="/map"> Sơ đồ mặt bằng</router-link></li>
-      <li><router-link to="/operation">Thống kê hoạt động</router-link></li>
-      <li><router-link to="/">Tra cứu lịch sử</router-link></li>
-      <li><router-link to="/">Cài đặt</router-link></li>
-      <li><router-link to="/">Trợ giúp</router-link></li>
-      <!-- <li><router-link to="/map">Thoát</router-link></li> -->
-    </nav>
-    <router-view  />
+<div>
+    <h2>PHẦN MỀM QUẢN LÝ GIÁM SÁT - PHÒNG KHÁM Y HỌC CỔ TRUYỀN - MINH DŨNG</h2>
+    <div class='floor-main'>
+      <fieldset>
+        <legend>TẦNG 1</legend>
+        <div class='floor-main__items'>
+          <div>
+            <h4>Phòng 101</h4>
+            <md-table v-model="room_101" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
 
+          <div>
+            <h4>Phòng 102</h4>
+            <md-table v-model="room_102" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>TẦNG 2</legend>
+        <div class='floor-main__items'>
+          <div>
+            <h4>Phòng 201</h4>
+            <md-table v-model="room_201" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+          
+          <div>
+            <h4>Phòng 202</h4>
+            <md-table v-model="room_202" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
-  
-  </div>
+    <div class="floor-sub">
+      <fieldset>
+        <legend>TẦNG 3 </legend>
+        <div class='floor-main__items'>
+          <div>
+            <h4>Phòng VIP 1</h4>
+            <md-table v-model="room_301" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+          
+          <div>
+            <h4>Phòng VIP 2</h4>
+            <md-table v-model="room_302" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+          <div>
+            <h4>Phòng VIP 3</h4>
+            <md-table v-model="room_303" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+          
+          <div>
+            <h4>Phòng VIP 4</h4>
+            <md-table v-model="room_304" md-card>
+              <md-table-row slot="md-table-row" slot-scope="{ item }">
+                <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
+                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
+                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+              </md-table-row>
+            </md-table>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class='floor-info'>
+      <fieldset class='errors'>
+        <legend style="width:320px">THÔNG BÁO LỖI TRUYỀN THÔNG</legend>
+        <md-table v-model="errors" md-card>
+          <md-table-row slot="md-table-row" slot-scope="{ item }">
+            <md-table-cell></md-table-cell>
+            <md-table-cell md-label="Thông báo" md-sort-by="message">{{ item.message }}</md-table-cell>
+            <md-table-cell md-label="Thời điểm" md-sort-by="off">{{ item.time }}</md-table-cell>
+          </md-table-row>
+        </md-table>
+      </fieldset>
+      <fieldset class='operation'>
+        <legend style="width:400px">THÔNG BÁO HOẠT ĐỘNG CỦA PHẦN MỀM</legend>
+          <md-table v-model="operations" md-card>
+            <md-table-row slot="md-table-row" slot-scope="{ item }">
+              <md-table-cell></md-table-cell>
+              <md-table-cell md-label="Thông báo" md-sort-by="message">{{ item.action }}</md-table-cell>
+              <md-table-cell md-label="Thời điểm" md-sort-by="off">{{ item.time }}</md-table-cell>
+            </md-table-row>
+          </md-table>
+      </fieldset>
+      <div class='time-info'>
+        <fieldset>
+          <legend style="width:230px">THỜI GIAN HOẠT ĐỘNG</legend>
+          <h1 class="text-content">{{time_use}}</h1>
+        </fieldset>
+        <div class="text-content">{{time_current}}</div>
+      </div>
+    </div>
+</div>
 </template>
-
 <script>
-
-export default {
+export default{
+  name:'Home',
   created() {
     let startTime = new Date().getTime()
     this.timer = setInterval(()=>{
@@ -476,238 +604,8 @@ export default {
           action:'Tắt phần mềm!',
           time:'04/03/2022 12:12:34'
         },
-      ],
-      operationRes:[
-        {
-          type:'Bồn sục',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Xông hơi khô',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Xông hơi ướt',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Xông đá muối',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Đèn chiếu sáng',
-          on:'0',
-          off:'0'
-        },
       ]
     }
   }
-  // computed:{
-  //   enable(){
-  //     let path =this.$router.currentRoute.path
-  //     console.log(path)
-  //     if(path.indexOf('dashboard')!==-1)
-  //     {
-  //       console.log('dash route')
-  //       return false
-  //     }
-  //     return true
-  //   }
-  // }
-
 }
 </script>
-
-<style lang="scss">
-html,body{
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(24, 97, 253) !important;
-  height: 100%;
-  color: black;
-  font-size: 1rem !important;
-  // margin: 0 px;
-}
-#app{
-  height: 100%;
-}
-.main-nav{
-  list-style-type: none;
-  height: 35px;
-  background-color: #417AF9;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  li{
-    display: inline-block;
-    // width: 160px;
-    height: 30px;
-    margin-left: 20px;
-    text-align: center;
-    a{
-      text-decoration: none;
-      color: black !important;
-      // font-weight: bold;
-      line-height: 30px;
-    }
-  }
-  li:hover{
-    background-color: #759ff8;
-  }
-}
-h2{
-  text-align: center;
-  color: yellow;
-  margin-top:10px;
-  margin-bottom: 20px;
-}
-.md-table{
-  border-collapse: collapse;
-}
-td, th {
-  border: 1px solid black !important;
-  font-size: 1rem;
-  font-weight: bold;
-  height: 24px !important;
-}
-fieldset{
-  border: 1px solid white !important;
-  width: 50%;
-  padding: 5px;
-  overflow:hidden;
-  legend{
-    font-size: 1.2rem;
-    color: white;
-    margin-left: 10px;
-    width: 75px;
-  }
-
-}
-.floor-main__items{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  h4{
-    text-align: center;
-  }
-  .md-table-head{
-    background-color: #f19a47;
-    text-align: center;
-  }
-}
-.floor-main{
-  margin: 0 5px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  gap:20px;
-}
-.floor-sub{
-  margin: 0 5px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  fieldset{
-    width: 100%;
-  }
-}
-.floor-info{
-  margin: 0 5px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  gap:20px;
-  .md-table{
-    max-height: 150px;
-  }
-  .errors{
-    width: 45%;
-    .md-table-head{
-      background-color: #fc6f6a;
-      text-align: center;
-    }
-  }
-  .search{
-    width: 45%;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    align-items: center;
-    justify-content: space-between;
-    .group-button{
-      display: flex;
-      flex-direction: column;
-      .cus-button{
-        width: 150px;
-        height: 50px;
-        text-transform: none;
-        margin:0px 0px;
-        
-      }
-    }
-  }
-  .operation{
-    width: 35%;
-    .md-table-head{
-      background-color: #f19a47;
-      text-align: center;
-    }
-  }
-  .time-info{
-    width: 20%;
-    // height: 190px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between ;
-    align-items: center;
-    fieldset{
-      width: 100%;
-      height: 100%;
-      
-    }
-    h1{
-      text-align: center;
-    }
-    .text-content{
-      background-color:white;
-      width:100%;
-      text-align:center;
-      padding:5px;
-    }
-  }
-  
-}
-.image-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: white;
-  height: 100%;
-  img{
-    max-width: 70%;
-    max-height: 70%;
-    object-fit: contain;
-  }
-  select:focus {
-    outline: none !important;
-    border:1px solid #417AF9 !important ;
-  }
-  select{
-    margin-bottom: 30px;
-    height: 48px;
-    background-color:#F8F2FF;
-    border-width: 0px;
-    border-radius: 2px;
-    padding: 8px;
-    width: 260px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-  }
-}
-</style>

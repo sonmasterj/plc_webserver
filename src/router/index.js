@@ -1,5 +1,5 @@
-// import Vue from 'vue'
-// import VueRouter from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 // import Login from '../views/Login.vue'
 // import Home from '../views/Home.vue'
 // import Customer from '../views/Customer/Customer.vue'
@@ -14,14 +14,17 @@
 // import SiteItem from '../views/Site/SiteItem'
 // import SiteTransaction from '../views/Site/SiteTransaction'
 // import DashBoard from '../views/Dashboard/Dashboard.vue'
-// Vue.use(VueRouter)
+import Home from '../views/home/Home.vue'
+import Map from '../views/map/Map.vue'
+import Operation from '../views/operation/Operation.vue'
+Vue.use(VueRouter)
 
-// const routes = [
-//   {
-//     path:'/',
-//     name:'home',
-//     component:Home,
-//   },
+const routes = [
+  {
+    path:'/home',
+    name:'home',
+    component:Home,
+  },
 //   {
 //     path: '/login',
 //     name: 'login',
@@ -30,81 +33,27 @@
 //     // which is lazy-loaded when the route is visited.
 //     component: Login
 //   },
-//   {
-//     path:'/customer',
-//     name:'customer',
-//     component:Customer,
-//     children:[
-//       {
-//         path:'/customer/home',
-//         component:CustomerHome,
-//       },
-//       {
-//         path:'/customer/site',
-//         component:CustomerSite,
-//       },
-//       {
-//         path:'/customer/system',
-//         component:CustomerSystem,
-//       }
-//     ]
-//   },
+  {
+    path:'/map',
+    name:'map',
+    component:Map,
+  },
+  {
+    path:'/operation',
+    name:'operation',
+    component:Operation,
+  }
 //   {
 //     path:'/dashboard',
 //     name:'dashboard',
 //     component:DashBoard,
-//     // children:[
-//     //   {
-//     //     path:'/customer/home',
-//     //     component:CustomerHome,
-//     //   },
-//     //   {
-//     //     path:'/customer/site',
-//     //     component:CustomerSite,
-//     //   },
-//     //   {
-//     //     path:'/customer/system',
-//     //     component:CustomerSystem,
-//     //   }
-//     // ]
 //   },
-//   {
-//     path:'/site/:id',
-//     name:'site',
-//     component:Site,
-//     children:[
-//       {
-//         path:'/site/:id/setting',
-//         component:SiteSetting,
-//       },
-//       {
-//         path:'/site/:id/user',
-//         component:SiteUser,
-//       },
-//       {
-//         path:'/site/:id/shelf',
-//         component:SiteRoomShelf,
-//       },
-//       {
-//         path:'/site/:id/bin',
-//         component:SiteBin,
-//       },
-//       {
-//         path:'/site/:id/item',
-//         component:SiteItem,
-//       },
-//       {
-//         path:'/site/:id/transaction',
-//         component:SiteTransaction,
-//       }
-//     ]
-//   }
-// ]
+]
 
-// const router = new VueRouter({
-//   mode: 'history',
-//   base: process.env.BASE_URL,
-//   routes
-// })
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
 
-// export default router
+export default router
