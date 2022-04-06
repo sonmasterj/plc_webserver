@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class='main-nav'>
-      <li><router-link to="/home">Trang chủ</router-link></li>
+      <li><router-link to="/">Trang chủ</router-link></li>
       <li><router-link to="/map"> Sơ đồ mặt bằng</router-link></li>
       <li><router-link to="/operation">Thống kê hoạt động</router-link></li>
       <li><router-link to="/">Tra cứu lịch sử</router-link></li>
