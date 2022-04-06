@@ -10,9 +10,8 @@
             <md-table v-model="room_101" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -22,9 +21,8 @@
             <md-table v-model="room_102" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -38,9 +36,8 @@
             <md-table v-model="room_201" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -50,9 +47,8 @@
             <md-table v-model="room_202" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -69,9 +65,8 @@
             <md-table v-model="room_301" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -81,9 +76,8 @@
             <md-table v-model="room_302" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -92,9 +86,8 @@
             <md-table v-model="room_303" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -104,9 +97,8 @@
             <md-table v-model="room_304" md-card>
               <md-table-row slot="md-table-row" slot-scope="{ item }">
                 <md-table-cell style="background-color:#7dffa6" md-label="Thiết bị" md-sort-by="name">{{ item.name }}</md-table-cell>
-                <md-table-cell md-label="Trạng thái" md-sort-by="status" :style="{color:item.status==='Tắt'?'red':'blue'}">{{ item.status }}</md-table-cell>
-                <md-table-cell md-label="Bật" md-sort-by="on">{{ item.on }}</md-table-cell>
-                <md-table-cell md-label="Tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
+                <md-table-cell md-label="Số lần bật" md-sort-by="on">{{ item.on }}</md-table-cell>
+                <md-table-cell md-label="Số lần tắt" md-sort-by="off">{{ item.off }}</md-table-cell>
               </md-table-row>
             </md-table>
           </div>
@@ -560,36 +552,6 @@ export default {
           on:0,
           off:0
         },   
-      ],
-      errors:[
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
       ],
       operationRes:[
         {
