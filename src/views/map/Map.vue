@@ -12,6 +12,9 @@
       <img v-else :src="require('../../assets/image/tang3.png')" alt="photo">
       
     </div>
+    <div style="height:20px;background-color:white">
+
+    </div>
 </div>
 </template>
 <script>

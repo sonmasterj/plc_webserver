@@ -4,12 +4,30 @@
       <li><router-link to="/">Trang chủ</router-link></li>
       <li><router-link to="/map"> Sơ đồ mặt bằng</router-link></li>
       <li><router-link to="/operation">Thống kê hoạt động</router-link></li>
-      <li><router-link to="/">Tra cứu lịch sử</router-link></li>
-      <li><router-link to="/">Cài đặt</router-link></li>
+      <li>
+        <div class="dropdown">
+          <span class="dropbtn">Tra cứu lịch sử</span>
+          <div class="dropdown-content">
+            <router-link to="/">Lỗi truyền thông</router-link>
+            <router-link to="/soft-history">Hoạt động của phần mềm</router-link>
+            <router-link to="/device-history">Hoạt động của thiết bị</router-link>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropbtn">Cài đặt</span>
+          <div class="dropdown-content">
+            <router-link to="/">OPC Server</router-link>
+            <router-link to="/">SQL Database</router-link>
+          </div>
+        </div>
+      </li>
       <li><router-link to="/">Trợ giúp</router-link></li>
       <!-- <li><router-link to="/map">Thoát</router-link></li> -->
     </nav>
     <router-view  />
+    
 
 
   
@@ -42,468 +60,6 @@ export default {
       time_use:'null',
       time_current:'null',
       timer:null,
-      room_101:[
-        {
-          name:'Bồn sục 1',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 2',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Bồn sục 3',
-          status:'Bật',
-          on:2,
-          off:1
-        },
-        {
-          name:'Bồn sục 4',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Xông hơi khô 1',
-          status:'Bật',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 1',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Đèn dược liệu 1',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Đèn massage 1',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'',
-          status:'',
-          on:null,
-          off:null
-        },
-      ],
-      
-      room_102:[
-        {
-          name:'Bồn sục 5',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 6',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Bồn sục 7',
-          status:'Tắt',
-          on:2,
-          off:1
-        },
-        {
-          name:'Xông hơi khô 2',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 2',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Đèn dược liệu 2',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Đèn massage 2',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'',
-          status:'',
-          on:null,
-          off:null
-        },
-        {
-          name:'',
-          status:'',
-          on:null,
-          off:null
-        },
-      ],
-      room_201:[
-        {
-          name:'Bồn sục 8',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 9',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Bồn sục 10',
-          status:'Tắt',
-          on:2,
-          off:1
-        },
-        {
-          name:'Bồn sục 11',
-          status:'Tắt',
-          on:2,
-          off:1
-        },
-        {
-          name:'Xông hơi khô 3',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 3',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông đá muối 1',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Đèn dược liệu 3',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Đèn massage 3',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-       
-      ],
-      room_202:[
-        {
-          name:'Bồn sục12',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 13',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Bồn sục 14',
-          status:'Tắt',
-          on:2,
-          off:1
-        },
-        {
-          name:'Bồn sục 15',
-          status:'Tắt',
-          on:2,
-          off:1
-        },
-        {
-          name:'Xông hơi khô 4',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 4',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông đá muối 2',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Đèn dược liệu 4',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Đèn massage 4',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-       
-      ],
-      room_301:[
-        {
-          name:'Bồn sục 16',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 17',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Xông hơi khô 5',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 5',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông đá muối 3',
-          status:'Tắt',
-          on:0,
-          off:0
-        },    
-        {
-          name:'Đèn VIP 1',
-          status:'Tắt',
-          on:0,
-          off:0
-        },   
-      ],
-      room_302:[
-        {
-          name:'Bồn sục 18',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 19',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Xông hơi khô 6',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 6',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông đá muối 4',
-          status:'Tắt',
-          on:0,
-          off:0
-        },    
-        {
-          name:'Đèn VIP 2',
-          status:'Tắt',
-          on:0,
-          off:0
-        },   
-      ],
-      room_303:[
-        {
-          name:'Bồn sục 20',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 21',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Xông hơi khô 7',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 7',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông đá muối 5',
-          status:'Tắt',
-          on:0,
-          off:0
-        },    
-        {
-          name:'Đèn VIP 3',
-          status:'Tắt',
-          on:0,
-          off:0
-        },   
-      ],
-      room_304:[
-        {
-          name:'Bồn sục 22',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Bồn sục 23',
-          status:'Tắt',
-          on:0,
-          off:0
-        },
-        {
-          name:'Xông hơi khô 8',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông hơi ướt 8',
-          status:'Tắt',
-          on:1,
-          off:1
-        },
-        {
-          name:'Xông đá muối 6',
-          status:'Tắt',
-          on:0,
-          off:0
-        },    
-        {
-          name:'Đèn VIP 4',
-          status:'Tắt',
-          on:0,
-          off:0
-        },   
-      ],
-      errors:[
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-        {
-          message:'Kết nối bình thường với tủ điều khiển PLC!',
-          time:'04/03/2022 14:00:45'
-        },
-      ],
-      operations:[
-        {
-          action:'Mở phần mềm!',
-          time:'04/03/2022 12:12:34'
-        },
-        {
-          action:'Mở phần mềm!',
-          time:'04/03/2022 12:12:34'
-        },
-        {
-          action:'Tắt phần mềm!',
-          time:'04/03/2022 12:12:34'
-        },
-        {
-          action:'Mở phần mềm!',
-          time:'04/03/2022 12:12:34'
-        },
-        {
-          action:'Mở phần mềm!',
-          time:'04/03/2022 12:12:34'
-        },
-        {
-          action:'Tắt phần mềm!',
-          time:'04/03/2022 12:12:34'
-        },
-      ],
-      operationRes:[
-        {
-          type:'Bồn sục',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Xông hơi khô',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Xông hơi ướt',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Xông đá muối',
-          on:'0',
-          off:'0'
-        },
-        {
-          type:'Đèn chiếu sáng',
-          on:'0',
-          off:'0'
-        },
-      ]
     }
   }
   // computed:{
@@ -709,5 +265,65 @@ fieldset{
     width: 260px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   }
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .dropbtn{
+    height: 30px;
+    line-height: 30px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    a {
+      color: black;
+      padding: 8px 0px;
+      padding-left: 8px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      
+    }
+    a:hover {background-color: #759ff8}
+  }
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.search-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: centerFONT;
+  padding-bottom: 20px;
+  // width: 80%;
+  // margin-bottom: 20px;
+  input{
+    height: 40px;
+  }
+  .cus-button{
+    width: 120px;
+    height: 40px;
+    text-transform: none;
+    margin:0px 0px;
+        
+  }
+
+}
+.md-table-head{
+  background-color: #7dffa6;
 }
 </style>

@@ -142,6 +142,9 @@
         <div class="text-content">{{time_current}}</div>
       </div>
     </div>
+    <div style="height:20px">
+
+    </div>
 </div>
 </template>
 <script>
