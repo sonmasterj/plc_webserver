@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class='main-nav'>
+    <nav class='main-nav' v-if="enable">
       <li><router-link to="/">Trang chủ</router-link></li>
       <li><router-link to="/map"> Sơ đồ mặt bằng</router-link></li>
       <li><router-link to="/operation">Thống kê hoạt động</router-link></li>
@@ -23,14 +23,15 @@
           </div>
         </div>
       </li>
-      <li><router-link to="/">Trợ giúp</router-link></li>
-      <!-- <li><router-link to="/map">Thoát</router-link></li> -->
+      <li><a href="#" @click.prevent="showDialog=true">Trợ giúp</a></li>
+      <li><router-link to="/login">Thoát</router-link></li>
     </nav>
     <router-view  />
     
-
-
-  
+    <md-dialog-alert
+      :md-active.sync="showDialog"
+      md-content="Thông tin liên hệ:<br><br>Thanh Lam<br><br>Sđt: 0969xxxxxx<br><br>Mail: thanhlamxxxxxxx"
+      md-confirm-text="Ok" />
   </div>
 </template>
 
@@ -38,28 +39,44 @@
 
 export default {
   created() {
-    let startTime = new Date().getTime()
-    this.timer = setInterval(()=>{
-      let now = new Date(),
-          year = ''+ now.getFullYear(),
-          month = (''+(now.getMonth()+1)).padStart(2,'0'),
-          day = (''+now.getDate()).padStart(2,'0'),
-          hour = (''+now.getHours()).padStart(2,'0'),
-          min = (''+now.getMinutes()).padStart(2,'0'),
-          second = (''+now.getSeconds()).padStart(2,'0');
-      this.time_current = [day,month,year].join('/')+' '+ [hour,min,second].join(':')
-      this.time_use = new Date(now.getTime()-startTime).toISOString().substr(11,8)
-    },1000)
+    // let startTime = new Date().getTime()
+    // this.timer = setInterval(()=>{
+    //   let now = new Date(),
+    //       year = ''+ now.getFullYear(),
+    //       month = (''+(now.getMonth()+1)).padStart(2,'0'),
+    //       day = (''+now.getDate()).padStart(2,'0'),
+    //       hour = (''+now.getHours()).padStart(2,'0'),
+    //       min = (''+now.getMinutes()).padStart(2,'0'),
+    //       second = (''+now.getSeconds()).padStart(2,'0');
+    //   this.time_current = [day,month,year].join('/')+' '+ [hour,min,second].join(':')
+    //   this.time_use = new Date(now.getTime()-startTime).toISOString().substr(11,8)
+    // },1000)
+    this.$router.push('/login')
   },
-  beforeDestroy(){
-    clearInterval(this.timer)
-  },
+  // beforeDestroy(){
+  //   clearInterval(this.timer)
+  // },
+  // 
+  watch:{
+    $route (to){
+      console.log(to)
+      if(to.name=='login'){
+        this.enable = false
+      }
+      else{
+        this.enable = true
+      }
+    }
+  } ,
   data(){
     return{
       image_index:'1',
       time_use:'null',
       time_current:'null',
       timer:null,
+      enable:false,
+      
+      showDialog:false
     }
   }
   // computed:{
@@ -325,5 +342,20 @@ fieldset{
 }
 .md-table-head{
   background-color: #7dffa6;
+}
+.login-form{
+
+  width: 50%;
+  margin:0px auto;
+  margin-top:200px;
+  background-color: #f9f9f9;
+  padding: 24px;
+
+  h4{
+    text-align: center;
+    color:#417AF9;
+    margin-top:10px;
+    margin-bottom: 20px;
+  }
 }
 </style>

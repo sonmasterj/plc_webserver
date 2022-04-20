@@ -5,6 +5,7 @@ import Map from '../views/map/Map.vue'
 import Operation from '../views/operation/Operation.vue'
 import SoftwareHistory from '../views/history/SoftwareHistory.vue'
 import DeviceHistory from '../views/history/DeviceHistory.vue'
+import Login from '../views/login/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,6 +13,11 @@ const routes = [
     path:'/',
     name:'home',
     component:Home,
+  },
+  {
+    path:'/login',
+    name:'login',
+    component:Login
   },
 //   {
 //     path: '/login',
